@@ -32,8 +32,7 @@ export class EditCourseComponent implements OnInit {
     }, 0);
   }
   
-    // Method to load courses from local storage
-  loadCourses() {
+  loadCourses() { // Method to load courses from local storage
     const storedCourses = localStorage.getItem('courses');
     this.courses = storedCourses ? JSON.parse(storedCourses).map((c: Course) => Object.assign(new Course(), c)) : [];
   }
