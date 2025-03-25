@@ -5,8 +5,8 @@ import { SignUpModel } from '../models/user.model';
 
 @Component({
   selector: 'app-dashboard',
-  standalone: true,  // Ensure it's a standalone component
-  imports: [CommonModule, RouterModule],  // Import RouterModule
+  standalone: true, 
+  imports: [CommonModule, RouterModule], 
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })

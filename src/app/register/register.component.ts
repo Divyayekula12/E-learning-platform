@@ -7,12 +7,12 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-register',
   standalone: true, 
-  imports: [CommonModule, ReactiveFormsModule, RouterModule], // ✅ Ensure RouterModule is imported
+  imports: [CommonModule, ReactiveFormsModule, RouterModule], 
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-
+  // Defining a form group for handling registration
   registerForm: FormGroup;
 
   constructor(private userService: UserService, private router: Router) {
@@ -22,7 +22,7 @@ export class RegisterComponent {
       password: new FormControl('', [Validators.required])
     });
   }
-
+   // Method to check if a form control is invalid and has been touched
   isInvalid(controlName: string): boolean {
     const control = this.registerForm.get(controlName);
     return !!(control && control.invalid && control.touched);
@@ -38,6 +38,7 @@ export class RegisterComponent {
       this.registerForm.reset(); 
   
       console.log('Navigating to login...'); 
+      // Navigate to the login page after successful registration
       this.router.navigate(['/login']).then(success => {
         if (success) {
           console.log('Navigation successful');
@@ -47,7 +48,7 @@ export class RegisterComponent {
       });
   
     } else {
-      alert('User already registered with this email');
+      alert('User already registered with this email'); // Shows error if user already exists
     }
   }
   

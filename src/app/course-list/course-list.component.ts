@@ -13,12 +13,13 @@ import { CommonModule, NgIf } from '@angular/common';
 })
 export class CourseListComponent implements OnInit {
   courses: Course[] = [];
-  filteredCourses: Course[] = [];
-  searchQuery: string = '';
+  filteredCourses: Course[] = []; // Array to store the filtered list of courses based on search query
+  searchQuery: string = ''; // Variable to hold the search input value
 
   constructor(private courseService: CourseService, private router: Router) {}
 
   ngOnInit() {
+     // Subscribe to the courseService observable to get the latest list of courses
     this.courseService.courses$.subscribe(courses => {
       this.courses = courses;
       this.filterCourses();  
@@ -27,11 +28,11 @@ export class CourseListComponent implements OnInit {
 
   filterCourses() {
     this.filteredCourses = this.courses.filter(course =>
-      course.title.toLowerCase().includes(this.searchQuery.toLowerCase())
+      course.title.toLowerCase().includes(this.searchQuery.toLowerCase()) // Convert to lowercase for case-insensitive search
     );
   }
 
-  deleteCourse(courseId: number) {
+  deleteCourse(courseId: number) { //deletes by course by ID
     this.courseService.deleteCourse(courseId);
   }
 

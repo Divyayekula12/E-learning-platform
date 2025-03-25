@@ -13,7 +13,7 @@ export const routes: Routes = [
     { path: 'register', component: RegisterComponent },
     { path: 'login', component: LoginComponent },
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
-    { path: 'add-course', component: AddCourseComponent },  // Ensure this route exists
+    { path: 'add-course', component: AddCourseComponent }, 
     { path: 'courses', component: CourseListComponent } ,
     { path: 'edit-course/:id', component: EditCourseComponent },
     {path: 'course-list', component: CourseListComponent},

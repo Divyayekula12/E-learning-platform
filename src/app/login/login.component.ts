@@ -6,16 +6,16 @@ import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
-  standalone: true, // Add standalone property
-  imports: [ReactiveFormsModule, CommonModule, RouterModule], // Import RouterModule
+  standalone: true, 
+  imports: [ReactiveFormsModule, CommonModule, RouterModule], 
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  
-  loginForm: FormGroup;
-  errorMessage: string = '';
 
+  loginForm: FormGroup; // Form group to manage login form controls
+  errorMessage: string = '';
+  // Injecting Router and UserService into the constructor
   constructor(private router: Router, private userService: UserService) {
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -28,6 +28,7 @@ export class LoginComponent {
     return !!(control && control.invalid && control.touched);
   }
 
+  // Method to handle login submission
   onLogin() {
     if (this.loginForm.invalid) {
       return;
@@ -38,7 +39,7 @@ export class LoginComponent {
     if (this.userService.authenticateUser(email, password)) {
       // Store user details in localStorage
       localStorage.setItem('user', JSON.stringify({ email }));
-      this.router.navigateByUrl('/dashboard');
+      this.router.navigateByUrl('/dashboard'); // navigate to dashboard
     } else {
       this.errorMessage = "Invalid email or password. Try again.";
     }
