@@ -1,0 +1,85 @@
+*{
+   
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h5{
+  font-size: 20px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #5f9ea0;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-right {
+    margin-left: auto; 
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+#login-btn {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+}
+
+#logout-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+}
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  h1 {
+    margin: 20px;
+    text-align: center;
+  }
+  p {
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 5px;
+    margin: 5px 5px;
+}
+p:hover{
+  transform: scale(1.05);
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-image: url('https://daraagrussdesign.com/wp-content/uploads/2024/01/8.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+

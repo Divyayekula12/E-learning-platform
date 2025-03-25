@@ -1,0 +1,95 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f4f4f4;
+    font-size: 20px;
+}
+.parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+.parent button{
+    margin: 5px 0;
+}
+
+.course-list-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.course-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+.course-card {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 8px;
+    width: 400px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: pointer;
+}
+.course-card h2 {
+    font-size: 18px;
+}
+
+.course-card p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.bottom-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+view-btn, .delete-btn, .edit-btn {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    flex: 1; 
+    max-width: 100px; 
+}
+.view-link {
+    display: inline-block;
+    color: #0c0909;
+    padding: 10px 15px;
+    text-decoration: none;
+    text-align: center;
+}
+.delete-btn { background: darkred; }
+.edit-btn { background: darkblue; }
+.add-btn{
+    margin: 20px 0;
+    background: darkgreen;
+    color: white;
+}
+.dashboard-btn{
+    border-radius: 5px;
+    border: none;
+    background-color: antiquewhite;
+    color: #0c0909;
+    
+}
+.search-container{
+    padding: 10px;
+    margin: 5px 0;
+}

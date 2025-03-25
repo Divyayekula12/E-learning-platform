@@ -1,0 +1,20 @@
+<div class="add-course-container">
+    <h2>Add New Course</h2>
+    
+    <label>Title:</label>
+    <input type="text" [(ngModel)]="course.title" required>
+  
+    <label>Instructor:</label>
+    <input type="text" [(ngModel)]="course.instructor" required>
+  
+    <label>Price:</label>
+    <input type="number" [(ngModel)]="course.price" required>
+  
+    <label>Description:</label>
+    <textarea [(ngModel)]="course.description" required></textarea>
+  
+    <button (click)="addCourse()">➕ Add Course</button>
+    <button (click)="goBack()">⬅ Back</button>
+
+  </div>
+  

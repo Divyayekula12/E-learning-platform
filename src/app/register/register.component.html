@@ -1,0 +1,28 @@
+<div class="parent"> 
+    <div class="container" id="container">
+      <div class="form-container sign-up">
+        <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+          <h1>Create Account</h1>
+          <input type="text" formControlName="name" placeholder="Name" />
+          <div *ngIf="isInvalid('name')" class="error">
+            Name is required.
+          </div>
+          <input type="email" formControlName="email" placeholder="Email" />
+          <div *ngIf="isInvalid('email')" class="error">
+            <span *ngIf="registerForm.get('email')?.errors?.['required']">Email is required.</span>
+            <span *ngIf="registerForm.get('email')?.errors?.['email']">Invalid email format.</span>
+          </div>
+          <input type="password" formControlName="password" placeholder="Password" />
+          <div *ngIf="isInvalid('password')" class="error">
+            <span *ngIf="registerForm.get('password')?.errors?.['required']">Password is required.</span>
+            <span *ngIf="registerForm.get('password')?.errors?.['minlength']">Password must be at least 6 characters.</span>
+          </div>
+          <button [disabled]="registerForm.invalid">Sign Up</button>
+  
+          <p>Already a user? <a [routerLink]="['/login']">Click here to Login</a></p>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  

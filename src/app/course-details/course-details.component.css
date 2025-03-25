@@ -1,0 +1,32 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+  }
+  .course-details {
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .course-details h1 {
+      color: #512da8;
+    }
+    
+    .course-details p {
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    
+    .course-details a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: white;
+      background-color: #512da8;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    .box{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }

@@ -1,0 +1,32 @@
+<div class="parent">
+    <h1>Available Courses</h1>
+    <button class="dashboard-btn" (click)="goToDashboard()">🏠 Go to Dashboard</button>
+
+    <div class="search-container">
+        <input type="text" [(ngModel)]="searchQuery" (input)="filterCourses()" placeholder="Search courses...">
+    </div>
+
+    <div class="course-list-header">
+        <a routerLink="/add-course">
+            <button class="add-btn">➕ Add New Course</button>
+        </a>
+    </div>
+    <div class="course-container">
+        <div *ngFor="let course of filteredCourses" class="course-card">
+            <h2>{{ course.title }}</h2>
+            <p><strong>Instructor:</strong> {{ course.instructor }}</p>
+            <p><strong>Price:</strong> ₹{{ course.price }}</p>
+
+            <div class="button-container">
+                <a [routerLink]="'/course-details/' + course.id" class="view-link">
+                    📖 Course Details
+                </a>
+            </div>
+
+            <div class="bottom-buttons">
+                <button class="delete-btn" (click)="deleteCourse(course.id)">🗑 Delete</button>
+                <button class="edit-btn" (click)="editCourse(course.id)">✏️ Edit</button>
+            </div>
+        </div>
+    </div>
+</div>
