@@ -1,0 +1,22 @@
+.search-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    margin: 20px 0; 
+  }
+  .search-box {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center; 
+    outline: none;
+  }
+  
+  .search-box:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle glow effect */
+  }
+  

@@ -1,0 +1,17 @@
+<div class="con">
+  <button class="dashboard-btn" (click)="goToDashboard()">🏠 Dashboard</button>
+</div>
+
+<app-filter (searchEvent)="filterCourses($event)"></app-filter>
+
+<div class="course-container">
+  <div *ngFor="let course of filteredCourses" class="course-card"> <!-- Use filteredCourses -->
+    <h2>{{ course.title }}</h2>
+    <p><strong>ID:</strong> {{ course.id }}</p>
+    <a [routerLink]="['/course-details', course.id]">View Details</a>
+    <div class="bottom-buttons">
+      <button class="edit-btn" (click)="editCourse(course.id)">✏️ Edit</button>
+      <button class="delete-btn" (click)="deleteCourse(course.id)">🗑 Delete</button>
+    </div>
+  </div>
+</div>

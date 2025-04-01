@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": "0b0b",
+      "name": "q",
+      "email": "q@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "9372",
+      "name": "w",
+      "email": "w@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "40d5",
+      "name": "w",
+      "email": "w@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": "df46",
+      "name": "divya",
+      "email": "divya@gmail.com",
+      "password": "divya1"
+    }
+  ],
+  "courses": [
+    {
+      "id": "7",
+      "title": "angular",
+      "instructor": "divya",
+      "price": 3000,
+      "description": "kagd;ofuasdgkbamsdvksbdh;aksgasbjgasg"
+    },
+    {
+      "id": 8,
+      "title": "a",
+      "instructor": "a",
+      "price": 0,
+      "description": "a"
+    }
+  ]
+}
